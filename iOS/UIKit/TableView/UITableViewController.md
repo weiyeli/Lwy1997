@@ -1,0 +1,3 @@
+# UITableViewController
+## 官方解释
+UITableViewController是一个管理TableView的视图控制器。文档认为，如果界面具有一个TableView和其他很少或者没有其他View，那么十分适合继承UITableViewController，因为UITableViewController已经采用管理表视图内容和响应更改所需的协议。
