@@ -51,7 +51,7 @@ view.backgroundColor = UIColor(dynamicProvider: { (collection) -> UIColor in
 
 或者用 Xcode 11 在 Assets 里为每个颜色创建一个 Color Set 然后在 Appearances 里选择带有 Dark 的选项来生成一个动态颜色，代码里通过 [UIColor colorNamed:] 来获取颜色。
 
-![img](https://internal-api.feishu.cn/space/api/file/out/P2XFmoiPqGv9yesBtCkGXtcCw5IjWnrWYcX7c5aPzdRdQrCrGq/)
+
 
 ```
 view.backgroundColor = UIColor(named: "BackgroundColor")
@@ -111,7 +111,7 @@ overrideUserInterfaceStyle = .darkprint(traitCollection.userInterfaceStyle)
 
 答案是不需要，根据WWDC的讲义：
 
-![img](http://pwzyjov6e.bkt.clouddn.com/blog/2019-09-09-132229.png)
+
 
 当我们设置一个 controller 为 dark 之后，这个 controller 下的 view，都会是 dark mode，**但是后续推出的 controller 仍然是跟随系统的样式。**
 
@@ -129,10 +129,10 @@ overrideUserInterfaceStyle = .darkprint(traitCollection.userInterfaceStyle)
 
 `-UITraitCollectionChangeLoggingEnabled YES`
 
-![image-20190909212340531](http://pwzyjov6e.bkt.clouddn.com/blog/2019-09-09-132340.png)
+
 
 ## Lark暗黑模式适配方案
 
-![下载](http://pwzyjov6e.bkt.clouddn.com/blog/2019-09-09-132540.png)
+
 
 在Info.plist中新增User Interface Style，强行设置为Light模式，嗯，很暴力

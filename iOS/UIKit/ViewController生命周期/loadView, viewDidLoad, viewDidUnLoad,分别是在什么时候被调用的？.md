@@ -17,3 +17,4 @@ DriveSingleImagePreviewController中有一个picView。在PDF预览中想把这�
 当ViewController的view被访问，并且view为nil的时候，系统会执行vc的viewDidLoad()方法。在上述例子中，因为我们直接访问了picView，没有访问DriveSingleImagePreviewController.view，所以viewDidLoad()方法没有执行。
 
 ## viewDidUnLoad 
+

@@ -6,5 +6,3 @@
   + 创建UIWindow
   + 设置RootViewController
   + MakeKeyAndVisible
-
-![image-20190914101542454](http://pwzyjov6e.bkt.clouddn.com/blog/2019-09-14-021543.png)

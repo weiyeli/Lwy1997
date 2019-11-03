@@ -49,7 +49,7 @@
 2. 生成_str成员变量set和get方法的实现
 3. 生成一个_str的成员变量。(注意：这种方式生成的成员变量是private的)
 
-**总结：属性重写****setter****和****getter****方法**
+总结：属性重写**setter**和**getter**方法
 
 使用属性@property能够帮我们省去了很多繁杂的工作，但有的时候我们在使用属性的时候还是需要去重写一下其setter和getter方法，这个时候我们应该怎么做呢？
 
@@ -57,6 +57,6 @@
 
 可以直接重写
 
-**如果同时重写`setter`和`getter**`
+**如果同时重写setter和getter**
 
 需要加上@synthesize propertyName = _propertyName;不然系统会不认_str。因为如果你同时重写了getter和setter方法，系统就不会帮你自动生成这个_str变量，所以当然报错说不认识这个变量。所以得手动指定成员变量，然后再同时重写了getter和setter方法。

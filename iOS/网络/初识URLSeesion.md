@@ -2,7 +2,7 @@
 ## 概述
 URLSession既是一个类，也是一组用于处理基于HTTP/HTTPS的请求的类，关于URLSession的组成可以看下图：
 
-![](../pic/url_session_diagram.png)
+![url_session_diagram](https://tva1.sinaimg.cn/large/006y8mN6gy1g8kwcxwc3pj30j80csq46.jpg)
 
 URLSession是负责接收和发送HTTP请求的核心类，可以通过URLSessionConfiguration来创建URLSession，URLSessionConfiguration主要有以下三种形式：
 
@@ -18,7 +18,7 @@ URLSessionTask是一个表示任务对象的抽象类。一个session创建一�
 2. URLSessionUploadTask：使用此任务通常通过HTTP POST或PUT方法将文件从磁盘上传到Web服务器
 3. URLSessionDownloadTask：使用此任务将文件从远程服务下载到临时文件位置
 
-![](../pic/url_session_diagram_2.png)
+![url_session_diagram_2](https://tva1.sinaimg.cn/large/006y8mN6gy1g8kwd78gfbj30f1085glz.jpg)
 
 您还可以暂停，恢复和取消任务。URLSessionDownloadTask还有暂停功能，以便于将来恢复下载。
 
@@ -78,5 +78,4 @@ func getSearchResults(searchTerm: String, completion: @escaping QueryResult) {
 
 实现效果如下：
 
-![](../pic/Simulator-Screen-Shot-12-Aug-2015-11.02.34-pm.png)
-
+![Simulator-Screen-Shot-12-Aug-2015-11.02.34-pm](https://tva1.sinaimg.cn/large/006y8mN6gy1g8kwdrum3pj30ku112acq.jpg)

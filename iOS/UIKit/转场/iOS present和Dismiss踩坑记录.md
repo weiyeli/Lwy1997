@@ -13,7 +13,7 @@ Dismiss的作用是dismiss掉自己present出来的ViewController，但是通常
 1. 如果自己的presentedViewController不为nil，遍历自己的presentedViewController，逐一dismiss
 2. 如果自己的presentedViewController为nil，请求自己的presentingViewController把自己dismiss掉
 
-![](../pic/iOS ViewController Dismiss原理.jpg)
+![iOS ViewController Dismiss原理](https://tva1.sinaimg.cn/large/006y8mN6gy1g8knwe2s4xj30ki0olt9k.jpg)
 
 
 ## 参考文章
