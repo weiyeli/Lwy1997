@@ -57,3 +57,25 @@ mach-o的组成可以大致的分为三部分：
 
 想要了解更多细节，可以阅读文档：[Memory Usage Performance Guidelines](https://developer.apple.com/library/content/documentation/Performance/Conceptual/ManagingMemory/ManagingMemory.html#//apple_ref/doc/uid/10000160-SW1)
 
+## 启动过程
+
+使用dyld2启动应用的过程如图：
+
+![img](https://tva1.sinaimg.cn/large/006y8mN6gy1g8t6tvbjacj311s0bk3z8.jpg)
+
+大致的过程如下：
+
+> 加载dyld到App进程
+> 加载动态库（包括所依赖的所有动态库）
+> Rebase
+> Bind
+> 初始化Objective C Runtime
+> 其它的初始化代码
+
+### 加载动态库
+
+> dyld会首先读取mach-o文件的Header和load commands。
+> 接着就知道了这个可执行文件依赖的动态库。例如加载动态库A到内存，接着检查A所依赖的动态库，就这样的递归加载，直到所有的动态库加载完毕。通常一个App所依赖的动态库在100-400个左右，其中大多数都是系统的动态库，它们会被缓存到dyld shared cache，这样读取的效率会很高。
+
+查看mach-o文件所依赖的动态库，可以通过MachOView的图形化界面(展开Load Command就能看到)，也可以通过命令行otool。
+
